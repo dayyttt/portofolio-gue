@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color tokens — Design System */
+
+  /* Dark Navy — primary background */
+  --color-navy-950: #0a0f1e;
+  --color-navy-900: #0d1526;
+  --color-navy-800: #111d35;
+  --color-navy-700: #162444;
+
+  /* Charcoal — secondary / surface */
+  --color-charcoal-900: #1a1f2e;
+  --color-charcoal-800: #1e2436;
+  --color-charcoal-700: #252b3b;
+  --color-charcoal-600: #2d3447;
+
+  /* Soft Blue — accent */
+  --color-blue-accent-500: #4f8ef7;
+  --color-blue-accent-400: #6ba3f9;
+  --color-blue-accent-300: #89b8fb;
+  --color-blue-accent-600: #3a7af5;
+
+  /* Neutral Gray — supporting */
+  --color-gray-neutral-500: #6b7280;
+  --color-gray-neutral-400: #9ca3af;
+  --color-gray-neutral-300: #d1d5db;
+  --color-gray-neutral-200: #e5e7eb;
+  --color-gray-neutral-100: #f3f4f6;
+
+  /* Semantic aliases */
+  --color-background: var(--color-navy-950);
+  --color-surface: var(--color-charcoal-900);
+  --color-surface-elevated: var(--color-charcoal-800);
+  --color-accent: var(--color-blue-accent-500);
+  --color-accent-hover: var(--color-blue-accent-400);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: var(--color-gray-neutral-300);
+  --color-text-muted: var(--color-gray-neutral-400);
+  --color-border: var(--color-charcoal-600);
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+}
+
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
